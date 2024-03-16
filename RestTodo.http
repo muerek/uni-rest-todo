@@ -1,0 +1,71 @@
+@RestTodo_HostAddress = http://localhost:5057
+
+### Get all todos
+GET {{RestTodo_HostAddress}}/todos/
+Accept: application/json
+
+
+### Create todos
+POST {{RestTodo_HostAddress}}/todos/
+Content-Type: application/json
+
+{
+    "name": "Blumen gießen",
+    "description": ""
+}
+
+###
+POST {{RestTodo_HostAddress}}/todos/
+Content-Type: application/json
+
+{
+    "name": "Einkaufen",
+    "description": "Brezel, Butter, Paprika"
+}
+
+###
+POST {{RestTodo_HostAddress}}/todos/
+Content-Type: application/json
+
+{
+    "name": "Weltherrschaft",
+    "description": null
+}
+
+
+### Get all todos
+GET {{RestTodo_HostAddress}}/todos/
+Accept: application/json
+
+
+### Get details on Todo
+GET {{RestTodo_HostAddress}}/todos/2
+Accept: application/json
+
+### Update Todo
+PUT {{RestTodo_HostAddress}}/todos/2
+Content-Type: application/json
+
+{
+    "name": "Einkaufen",
+    "description": "Brezel, Butter, Paprika",
+    "completed": true
+}
+
+### Get completed todos
+GET {{RestTodo_HostAddress}}/todos/completed
+Accept: application/json
+
+### Get open todos
+GET {{RestTodo_HostAddress}}/todos/open
+Accept: application/json
+
+
+### Delete Todo
+DELETE {{RestTodo_HostAddress}}/todos/1
+Content-Type: application/json
+
+
+### Get all todos
+GET {{RestTodo_HostAddress}}/todos/
+Accept: application/json
