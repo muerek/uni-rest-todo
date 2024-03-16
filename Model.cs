@@ -6,7 +6,10 @@ class Todo
     public bool Completed { get; set; } = false;
 }
 
-record TodoSummaryDto(int Id, string Name, bool Completed);
+record TodoSummaryDto(int Id, string Name, bool Completed)
+{
+    public string Details => $"/todos/{Id}";
+};
 
 record TodoCreateDto(string Name, string? Description);
 
